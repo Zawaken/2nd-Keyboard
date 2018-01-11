@@ -9,7 +9,7 @@ Menu, Tray, Icon, shell32.dll, 283
 
 
 ~F24::
-FileRead, key, C:\Users\TaranWORK\Documents\GitHub\2nd-keyboard\2nd keyboard support files\keypressed.txt
+FileRead, key, D:\Home\Documents\GitHub\2nd-Keyboard\key.txt
 If (key = "o")
 	Run "%UserProfile%\AppData\Local\osu!\osu!.exe"
 else if(key = "p")
