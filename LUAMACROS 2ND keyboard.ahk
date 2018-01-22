@@ -11,7 +11,7 @@ Menu, Tray, Icon, shell32.dll, 283
 ~F24::
 FileRead, key, D:\Home\Documents\GitHub\2nd-Keyboard\key.txt
 If (key = "o")
-	Run "%UserProfile%\AppData\Local\osu!\osu!.exe"
+	Run "D:\Users\Zawaken\AppData\Local\osu!\osu!.exe"
 else if(key = "p")
 	return
 else if(key = "i")
@@ -23,7 +23,7 @@ else if(key = "rightbracket")
 	return
 
 else if (key = "y")
-return 
+	return 
 else if(key = "u")
 	return
 
@@ -136,14 +136,14 @@ else if(key = "equals")
 else if(key = "r")
 	return
 else if(key = "f")
-	{
+{
 	IfWinNotExist, ahk_class MozillaWindowClass
 	run, firefox.exe
 	if WinActive("ahk_class MozillaWindowClass")
 		send, ^{tab}
 	else
 		WinActivate ahk_class MozillaWindowClass
-	}
+}
 else if(key = "v")
 	return
 
@@ -168,15 +168,15 @@ else if(key = "enter")
 
 TaskbarMove(p_pos) {
 	label:="TaskbarMove_" p_pos
-
+	
 	WinExist("ahk_class Shell_TrayWnd")
 	SysGet, s, Monitor
-
+	
 	if (IsLabel(label)) {
 		Goto, %label%
 	}
 	return
-
+	
 	TaskbarMove_Top:
 	TaskbarMove_Bottom:
 	WinMove(sLeft, s%p_pos%, sRight, 0)
